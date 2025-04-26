@@ -18,6 +18,7 @@ public class JavaBasics04ArrayList {
 		names.add("student3");
 		names.add("student4");
 		names.add("student5");
+		names.add(1, "student2a");		// insert in the middle
 		
 		// -- Remove
 		// remove by index

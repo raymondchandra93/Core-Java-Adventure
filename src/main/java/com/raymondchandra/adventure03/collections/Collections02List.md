@@ -34,7 +34,7 @@ list.add("Orange");
 System.out.println(list.get(1)); // Banana
 ```
 
-# 📚 Java `LinkedList`
+### 2. `LinkedList`
 
 ---
 
@@ -75,7 +75,7 @@ public class LinkedListExample {
 }
 ```
 
-# 📚 Java `Vector`
+### 3. `Vector`
 
 ---
 
@@ -115,7 +115,7 @@ public class VectorExample {
 ```
 
 
-# 📚 Java `Stack`
+### 1. `Stack`
 
 ---
 
@@ -155,10 +155,59 @@ public class StackExample {
 }
 ```
 
-🎯 When to Use Which List?
+---
 
-Situation	Recommended List
-Fast random access needed	ArrayList
-Frequent insertions/deletions at ends	LinkedList
-Thread safety needed	Vector
-Need Stack (LIFO) behavior	Stack
+# 🎯 When to Use Which List?
+
+- Situation	-> Recommended List
+- Fast random access needed -> ArrayList
+- Frequent insertions/deletions at ends	-> LinkedList
+- Thread safety needed -> Vector
+- Need Stack (LIFO) behavior ->Stack
+
+---
+
+# 📚 Java List Collections — Time Complexity Comparison
+
+| Operation            | ArrayList     | LinkedList    | Vector         | Stack          |
+|----------------------|---------------|---------------|----------------|----------------|
+| get(int index)        | O(1)           | O(n)           | O(1)            | O(1) (inherited) |
+| add(E element)        | O(1) (amortized) | O(1)         | O(1) (amortized, synchronized) | O(1) (push) |
+| add(int index, E)     | O(n)           | O(n)           | O(n)            | -              |
+| remove(int index)     | O(n)           | O(n)           | O(n)            | O(1) (pop)     |
+| contains(Object o)    | O(n)           | O(n)           | O(n)            | O(n) (search)  |
+| push(E item)          | -              | -              | -               | O(1)           |
+| pop()                 | -              | -              | -               | O(1)           |
+| peek()                | -              | -              | -               | O(1)           |
+| search(Object o)      | -              | -              | -               | O(n)           |
+
+---
+
+# 🔥 Notes:
+
+- `ArrayList` and `Vector` offer **fast random access** (O(1)) but **slow shifting** on insertions/deletions at arbitrary positions.
+- `LinkedList` is **efficient for adding/removing** at the start or end but **inefficient for random access**.
+- `Vector` is **synchronized** — safe for multi-threading, but slower due to locking.
+- `Stack` is based on `Vector` but specializes for **LIFO** operations.
+
+✅ `push`, `pop`, and `peek` operations in `Stack` are **constant time** O(1).
+
+
+# 📚 Java Collections — Initial Backing Array Size
+
+---
+
+## ✨ ArrayList
+
+- When instantiated with `new ArrayList<>()`, **no array** is immediately created.
+- **Internal array size = 0** initially.
+- On first element insertion, an internal array of **size 10** is allocated.
+
+```java
+ArrayList<Integer> list = new ArrayList<>();
+// Initial array size = 0
+// After first add() → array size = 10
+```
+
+- **Vector** and **Stack** are also the same as ArrayList
+- **LinkedList** is not because it is made out of **Node**

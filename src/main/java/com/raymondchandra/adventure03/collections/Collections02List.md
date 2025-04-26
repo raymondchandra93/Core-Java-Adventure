@@ -34,6 +34,8 @@ list.add("Orange");
 System.out.println(list.get(1)); // Banana
 ```
 
+---
+
 ### 2. `LinkedList`
 
 ---
@@ -75,6 +77,8 @@ public class LinkedListExample {
 }
 ```
 
+---
+
 ### 3. `Vector`
 
 ---
@@ -114,8 +118,9 @@ public class VectorExample {
 }
 ```
 
+---
 
-### 1. `Stack`
+### 4. `Stack`
 
 ---
 

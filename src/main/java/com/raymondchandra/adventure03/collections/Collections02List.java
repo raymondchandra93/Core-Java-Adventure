@@ -16,7 +16,18 @@ public class Collections02List {
         animals.addFirst("Cow");
         animals.addLast("Sheep");
 
-        System.out.println(animals); // [Cow, Dog, Cat, Horse, Sheep]
+        System.out.println(animals); 			// [Cow, Dog, Cat, Horse, Sheep]
+        
+        // queue methods
+        System.out.println("LL Poll: " + animals.poll()); 	// [Cow]
+        System.out.println("LL Peek: " + animals.peek()); 	// [Dog]
+        
+        animals.offer("Chicken");
+        animals.offer("Fish");
+
+        // Display the queue again
+        System.out.println("LL after adding more elements: " + animals);
+        
 		
         // -- Vector --
 		Vector<String> colors = new Vector<>();
@@ -24,7 +35,7 @@ public class Collections02List {
 		colors.add("Green");
 		colors.add("Blue");
 
-		System.out.println(colors.get(1)); // Green
+		System.out.println("Vector get 2nd element: " + colors.get(1)); // Green
 		
 		// -- Stack --
 		Stack<String> colors2 = new Stack<>();
@@ -32,7 +43,7 @@ public class Collections02List {
 		colors2.push("Green");
 		colors2.push("Blue");
 
-		System.out.println(colors2.pop()); // Blue
-		System.out.println(colors2.peek()); // Green
+		System.out.println("Stack Pop: " + colors2.pop()); 		// Blue
+		System.out.println("Stack Peek: " + colors2.peek()); 	// Green
 	}
 }

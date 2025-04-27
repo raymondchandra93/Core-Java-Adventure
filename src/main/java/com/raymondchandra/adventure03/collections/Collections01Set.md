@@ -161,3 +161,9 @@ if (whitelistEmails.contains(emailToCheck)) {
 - Use `LinkedHashSet` when insertion order matters.
 - Use `TreeSet` when you need sorted elements.
 
+---
+
+## Note
+
+- Since Set in Java (like HashSet, LinkedHashSet, TreeSet) doesn’t have an index, you cannot get an element by index directly (unlike List).
+- But you can still retrieve one element by iterating.

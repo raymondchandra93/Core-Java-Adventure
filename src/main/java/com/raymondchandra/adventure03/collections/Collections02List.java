@@ -16,7 +16,9 @@ public class Collections02List {
         animals.addFirst("Cow");
         animals.addLast("Sheep");
 
-        System.out.println(animals); 			// [Cow, Dog, Cat, Horse, Sheep]
+        System.out.println(animals); 				// [Cow, Dog, Cat, Horse, Sheep]
+        System.out.println(animals.getFirst());		// [Cow]
+        System.out.println(animals.getLast());		// [Sheep]
         
         // queue methods
         System.out.println("LL Poll: " + animals.poll()); 	// [Cow]

@@ -1,6 +1,8 @@
 package com.raymondchandra.adventure06.threading;
 
 /**
+ * Starvation
+ * -----------
  * Starvation happens when 1 thread is NEVER GIVEN access to the CPU
  * 
  * In this example
